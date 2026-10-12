@@ -1,0 +1,150 @@
+season,team,outgoing_manager,manner_of_departure,date_of_vacancy,incoming_manager,date_of_appointment
+2014/15,West Brom,Pepe Mel,Mutual consent,2014-05-12,Alan Irvine,2014-06-14
+2014/15,Tottenham,Tim Sherwood,Sacked,2014-05-13,Mauricio Pochettino,2014-05-27
+2014/15,Southampton,Mauricio Pochettino,Signed by Tottenham,2014-05-27,Ronald Koeman,2014-06-16
+2014/15,Crystal Palace,Tony Pulis,Mutual consent,2014-08-14,Neil Warnock,2014-08-27
+2014/15,Crystal Palace,Neil Warnock,Sacked,2014-12-27,Alan Pardew,2015-01-02
+2014/15,West Brom,Alan Irvine,Sacked,2014-12-29,Tony Pulis,2015-01-01
+2014/15,Newcastle United,Alan Pardew,Signed by Crystal Palace,2015-01-02,John Carver,2015-01-26
+2014/15,QPR,Harry Redknapp,Resigned,2015-02-03,Chris Ramsey,2015-02-12
+2014/15,Aston Villa,Paul Lambert,Sacked,2015-02-11,Tim Sherwood,2015-02-14
+2014/15,Sunderland,Gus Poyet,Sacked,2015-03-16,Dick Advocaat,2015-03-17
+2015/16,West Ham,Sam Allardyce,End of contract,2015-05-24,Slaven Bilić,2015-06-09
+2015/16,Watford,Slaviša Jokanović,End of contract,2015-06-05,Quique Sánchez Flores,2015-06-05
+2015/16,Newcastle United,John Carver,Sacked,2015-06-09,Steve McClaren,2015-06-10
+2015/16,Leicester City,Nigel Pearson,Sacked,2015-06-30,Claudio Ranieri,2015-07-13
+2015/16,Sunderland,Dick Advocaat,Resigned,2015-10-04,Sam Allardyce,2015-10-09
+2015/16,Liverpool,Brendan Rodgers,Sacked,2015-10-04,Jürgen Klopp,2015-10-08
+2015/16,Aston Villa,Tim Sherwood,Sacked,2015-10-25,Rémi Garde,2015-11-02
+2015/16,Swansea City,Garry Monk,Sacked,2015-12-09,Alan Curtis (caretaker),2015-12-09
+2015/16,Chelsea,José Mourinho,Sacked,2015-12-17,Guus Hiddink,2015-12-19
+2015/16,Swansea City,Alan Curtis,End of caretaker spell,2016-01-18,Francesco Guidolin,2016-01-18
+2015/16,Newcastle United,Steve McClaren,Sacked,2016-03-11,Rafael Benítez,2016-03-11
+2015/16,Aston Villa,Rémi Garde,Mutual consent,2016-03-29,Eric Black (caretaker),2016-03-29
+2015/16,Everton,Roberto Martínez,Sacked,2016-05-12,David Unsworth & Joe Royle (caretakers),2016-05-12
+2016/17,Manchester United,Louis van Gaal,Sacked,2016-05-23,José Mourinho,2016-05-27
+2016/17,Southampton,Ronald Koeman,Signed by Everton,2016-06-14,Claude Puel,2016-06-30
+2016/17,Everton,David Unsworth & Joe Royle,End of caretaker spell,2016-06-14,Ronald Koeman,2016-06-14
+2016/17,Chelsea,Guus Hiddink,End of contract,2016-06-30,Antonio Conte,2016-07-01
+2016/17,Manchester City,Manuel Pellegrini,End of contract,2016-06-30,Pep Guardiola,2016-07-01
+2016/17,Watford,Quique Sánchez Flores,Mutual consent,2016-06-30,Walter Mazzarri,2016-07-01
+2016/17,Hull City,Steve Bruce,Resigned,2016-07-22,Mike Phelan,2016-07-22
+2016/17,Sunderland,Sam Allardyce,Signed by England,2016-07-22,David Moyes,2016-07-23
+2016/17,Swansea City,Francesco Guidolin,Sacked,2016-10-03,Bob Bradley,2016-10-03
+2016/17,Crystal Palace,Alan Pardew,Sacked,2016-12-22,Sam Allardyce,2016-12-23
+2016/17,Swansea City,Bob Bradley,Sacked,2016-12-27,Paul Clement,2017-01-02
+2016/17,Hull City,Mike Phelan,Sacked,2017-01-03,Marco Silva,2017-01-05
+2016/17,Leicester City,Claudio Ranieri,Sacked,2017-02-23,Craig Shakespeare,2017-03-12
+2016/17,Middlesbrough,Aitor Karanka,Mutual consent,2017-03-16,Steve Agnew (caretaker),2017-03-16
+2017/18,Watford,Walter Mazzarri,Mutual consent,2017-05-21,Marco Silva,2017-05-27
+2017/18,Crystal Palace,Sam Allardyce,Resigned,2017-05-23,Frank de Boer,2017-06-26
+2017/18,Southampton,Claude Puel,Sacked,2017-06-14,Mauricio Pellegrino,2017-06-23
+2017/18,Crystal Palace,Frank de Boer,Sacked,2017-09-11,Roy Hodgson,2017-09-12
+2017/18,Leicester City,Craig Shakespeare,Sacked,2017-10-17,Claude Puel,2017-10-25
+2017/18,Everton,Ronald Koeman,Sacked,2017-10-23,Sam Allardyce,2017-11-30
+2017/18,West Ham,Slaven Bilić,Sacked,2017-11-06,David Moyes,2017-11-07
+2017/18,West Brom,Tony Pulis,Sacked,2017-11-20,Alan Pardew,2017-11-29
+2017/18,Swansea City,Paul Clement,Sacked,2017-12-20,Carlos Carvalhal,2017-12-28
+2017/18,Stoke City,Mark Hughes,Sacked,2018-01-06,Paul Lambert,2018-01-15
+2017/18,Watford,Marco Silva,Sacked,2018-01-21,Javi Gracia,2018-01-21
+2017/18,Southampton,Mauricio Pellegrino,Sacked,2018-03-12,Mark Hughes,2018-03-14
+2017/18,West Brom,Alan Pardew,Mutual consent,2018-04-02,Darren Moore (caretaker),2018-04-02
+2018/19,Arsenal,Arsène Wenger,Retired,2018-05-13,Unai Emery,2018-05-23
+2018/19,Everton,Sam Allardyce,Sacked,2018-05-16,Marco Silva,2018-05-31
+2018/19,West Ham,David Moyes,End of contract,2018-05-16,Manuel Pellegrini,2018-05-22
+2018/19,Chelsea,Antonio Conte,Sacked,2018-07-13,Maurizio Sarri,2018-07-14
+2018/19,Fulham,Slaviša Jokanović,Sacked,2018-11-14,Claudio Ranieri,2018-11-14
+2018/19,Southampton,Mark Hughes,Sacked,2018-12-03,Ralph Hasenhüttl,2018-12-05
+2018/19,Manchester United,José Mourinho,Sacked,2018-12-18,Ole Gunnar Solskjær,2018-12-19
+2018/19,Huddersfield Town,David Wagner,Mutual consent,2019-01-14,Jan Siewert,2019-01-21
+2018/19,Leicester City,Claude Puel,Sacked,2019-02-24,Brendan Rodgers,2019-02-26
+2018/19,Fulham,Claudio Ranieri,Sacked,2019-02-28,Scott Parker,2019-02-28
+2019/20,Brighton,Chris Hughton,Sacked,2019-05-13,Graham Potter,2019-05-20
+2019/20,Chelsea,Maurizio Sarri,Signed by Juventus,2019-06-16,Frank Lampard,2019-07-04
+2019/20,Newcastle United,Rafael Benítez,End of contract,2019-06-30,Steve Bruce,2019-07-17
+2019/20,Watford,Javi Gracia,Sacked,2019-09-07,Quique Sánchez Flores,2019-09-07
+2019/20,Tottenham,Mauricio Pochettino,Sacked,2019-11-19,José Mourinho,2019-11-20
+2019/20,Arsenal,Unai Emery,Sacked,2019-11-29,Mikel Arteta,2019-12-20
+2019/20,Watford,Quique Sánchez Flores,Sacked,2019-12-01,Nigel Pearson,2019-12-06
+2019/20,Everton,Marco Silva,Sacked,2019-12-05,Carlo Ancelotti,2019-12-21
+2019/20,West Ham,Manuel Pellegrini,Sacked,2019-12-28,David Moyes,2019-12-29
+2019/20,Watford,Nigel Pearson,Sacked,2020-07-19,Hayden Mullins (interim),2020-07-19
+2020/21,West Brom,Slaven Bilić,Sacked,2020-12-16,Sam Allardyce,2020-12-16
+2020/21,Chelsea,Frank Lampard,Sacked,2021-01-25,Thomas Tuchel,2021-01-26
+2020/21,Sheffield United,Chris Wilder,Mutual consent,2021-03-13,Paul Heckingbottom (interim),2021-03-13
+2020/21,Tottenham,José Mourinho,Sacked,2021-04-19,Ryan Mason (interim),2021-04-19
+2021/22,Crystal Palace,Roy Hodgson,End of contract,2021-05-24,Patrick Vieira,2021-07-04
+2021/22,Wolves,Nuno Espírito Santo,Mutual consent,2021-05-23,Bruno Lage,2021-06-09
+2021/22,Everton,Carlo Ancelotti,Signed by Real Madrid,2021-06-01,Rafael Benítez,2021-06-30
+2021/22,Tottenham,Ryan Mason,End of caretaker spell,2021-06-30,Nuno Espírito Santo,2021-06-30
+2021/22,Watford,Xisco Muñoz,Sacked,2021-10-03,Claudio Ranieri,2021-10-04
+2021/22,Newcastle United,Steve Bruce,Mutual consent,2021-10-20,Graeme Jones (interim),2021-10-20
+2021/22,Tottenham,Nuno Espírito Santo,Sacked,2021-11-01,Antonio Conte,2021-11-02
+2021/22,Norwich City,Daniel Farke,Sacked,2021-11-06,Dean Smith,2021-11-15
+2021/22,Aston Villa,Dean Smith,Sacked,2021-11-07,Steven Gerrard,2021-11-11
+2021/22,Newcastle United,Graeme Jones,End of interim spell,2021-11-08,Eddie Howe,2021-11-08
+2021/22,Manchester United,Ole Gunnar Solskjær,Sacked,2021-11-21,Michael Carrick (caretaker),2021-11-21
+2021/22,Manchester United,Michael Carrick,End of caretaker spell,2021-12-02,Ralf Rangnick (interim),2021-12-03
+2021/22,Everton,Rafael Benítez,Sacked,2022-01-16,Duncan Ferguson (caretaker),2022-01-18
+2021/22,Watford,Claudio Ranieri,Sacked,2022-01-24,Roy Hodgson,2022-01-25
+2021/22,Everton,Duncan Ferguson,End of caretaker spell,2022-01-31,Frank Lampard,2022-01-31
+2021/22,Leeds United,Marcelo Bielsa,Sacked,2022-02-27,Jesse Marsch,2022-02-28
+2021/22,Burnley,Sean Dyche,Sacked,2022-04-15,Mike Jackson (caretaker),2022-04-15
+2022/23,Manchester United,Ralf Rangnick,End of interim spell,2022-05-22,Erik ten Hag,2022-05-23
+2022/23,Bournemouth,Scott Parker,Sacked,2022-08-30,Gary O'Neil,2022-08-30
+2022/23,Chelsea,Thomas Tuchel,Sacked,2022-09-07,Graham Potter,2022-09-08
+2022/23,Brighton,Graham Potter,Signed by Chelsea,2022-09-08,Roberto De Zerbi,2022-09-18
+2022/23,Wolves,Bruno Lage,Sacked,2022-10-02,Steve Davis (interim),2022-10-02
+2022/23,Aston Villa,Steven Gerrard,Sacked,2022-10-20,Aaron Danks (interim),2022-10-21
+2022/23,Aston Villa,Aaron Danks,End of interim spell,2022-11-01,Unai Emery,2022-11-01
+2022/23,Southampton,Ralph Hasenhüttl,Sacked,2022-11-07,Nathan Jones,2022-11-10
+2022/23,Wolves,Steve Davis,End of interim spell,2022-11-14,Julen Lopetegui,2022-11-14
+2022/23,Everton,Frank Lampard,Sacked,2023-01-23,Sean Dyche,2023-01-30
+2022/23,Leeds United,Jesse Marsch,Sacked,2023-02-06,Michael Skubala (interim),2023-02-06
+2022/23,Southampton,Nathan Jones,Sacked,2023-02-12,Rubén Sellés,2023-02-12
+2022/23,Leeds United,Michael Skubala,End of interim spell,2023-02-21,Javi Gracia,2023-02-21
+2022/23,Crystal Palace,Patrick Vieira,Sacked,2023-03-17,Paddy McCarthy (interim),2023-03-17
+2022/23,Crystal Palace,Paddy McCarthy,End of interim spell,2023-03-21,Roy Hodgson (interim),2023-03-21
+2022/23,Tottenham,Antonio Conte,Mutual consent,2023-03-26,Cristian Stellini (interim),2023-03-26
+2022/23,Leicester City,Brendan Rodgers,Mutual consent,2023-04-02,Adam Sadler (interim),2023-04-04
+2022/23,Chelsea,Graham Potter,Sacked,2023-04-02,Bruno Saltor (interim),2023-04-02
+2022/23,Chelsea,Bruno Saltor,End of interim spell,2023-04-06,Frank Lampard (interim),2023-04-06
+2022/23,Leicester City,Adam Sadler,End of interim spell,2023-04-10,Dean Smith,2023-04-10
+2022/23,Tottenham,Cristian Stellini,Sacked,2023-04-24,Ryan Mason (interim),2023-04-24
+2022/23,Leeds United,Javi Gracia,Sacked,2023-05-03,Sam Allardyce,2023-05-03
+2023/24,Chelsea,Frank Lampard,End of interim spell,2023-05-28,Mauricio Pochettino,2023-05-29
+2023/24,Tottenham,Ryan Mason,End of interim spell,2023-06-06,Ange Postecoglou,2023-06-06
+2023/24,Bournemouth,Gary O'Neil,Sacked,2023-06-19,Andoni Iraola,2023-06-19
+2023/24,Wolves,Julen Lopetegui,Mutual consent,2023-08-08,Gary O'Neil,2023-08-09
+2023/24,Sheffield United,Paul Heckingbottom,Sacked,2023-12-05,Chris Wilder,2023-12-05
+2023/24,Nottingham Forest,Steve Cooper,Sacked,2023-12-19,Nuno Espírito Santo,2023-12-20
+2023/24,Crystal Palace,Roy Hodgson,Resigned,2024-02-19,Oliver Glasner,2024-02-19
+2024/25,Brighton,Roberto De Zerbi,Mutual consent,2024-05-19,Fabian Hürzeler,2024-06-15
+2024/25,Liverpool,Jürgen Klopp,Resigned,2024-05-19,Arne Slot,2024-06-01
+2024/25,West Ham,David Moyes,End of contract,2024-05-19,Julen Lopetegui,2024-07-01
+2024/25,Chelsea,Mauricio Pochettino,Mutual consent,2024-05-21,Enzo Maresca,2024-06-03
+2024/25,Leicester City,Enzo Maresca,Signed by Chelsea,2024-06-03,Steve Cooper,2024-06-20
+2024/25,Manchester United,Erik ten Hag,Sacked,2024-10-28,Ruud van Nistelrooy (interim),2024-10-28
+2024/25,Manchester United,Ruud van Nistelrooy,End of interim spell,2024-11-11,Rúben Amorim,2024-11-11
+2024/25,Leicester City,Steve Cooper,Sacked,2024-11-24,Ben Dawson (interim),2024-11-24
+2024/25,Leicester City,Ben Dawson,End of interim spell,2024-12-01,Ruud van Nistelrooy,2024-12-01
+2024/25,Wolves,Gary O'Neil,Sacked,2024-12-15,Vítor Pereira,2024-12-19
+2024/25,Southampton,Russell Martin,Sacked,2024-12-15,Simon Rusk (interim),2024-12-15
+2024/25,Southampton,Simon Rusk,End of interim spell,2024-12-22,Ivan Jurić,2024-12-22
+2024/25,West Ham,Julen Lopetegui,Sacked,2025-01-08,Graham Potter,2025-01-09
+2024/25,Everton,Sean Dyche,Sacked,2025-01-09,Leighton Baines (interim),2025-01-09
+2024/25,Everton,Leighton Baines,End of interim spell,2025-01-11,David Moyes,2025-01-11
+2024/25,Southampton,Ivan Jurić,Mutual consent,2025-04-07,Simon Rusk (interim),2025-04-07
+2025/26,Tottenham,Ange Postecoglou,Sacked,2025-06-06,Thomas Frank,2025-06-12
+2025/26,Brentford,Thomas Frank,Signed by Tottenham,2025-06-12,Keith Andrews,2025-06-27
+2025/26,Nottingham Forest,Nuno Espírito Santo,Sacked,2025-09-08,Ange Postecoglou,2025-09-09
+2025/26,West Ham,Graham Potter,Sacked,2025-09-27,Nuno Espírito Santo,2025-09-27
+2025/26,Nottingham Forest,Ange Postecoglou,Sacked,2025-10-18,Sean Dyche,2025-10-21
+2025/26,Wolves,Vítor Pereira,Sacked,2025-11-02,Rob Edwards,2025-11-12
+2025/26,Chelsea,Enzo Maresca,Resigned,2026-01-01,Liam Rosenior,2026-01-08
+2025/26,Manchester United,Rúben Amorim,Sacked,2026-01-05,Michael Carrick,2026-01-13
+2025/26,Tottenham,Thomas Frank,Sacked,2026-02-11,Igor Tudor,2026-02-14
+2025/26,Nottingham Forest,Sean Dyche,Sacked,2026-02-12,Vítor Pereira,2026-02-15
+2025/26,Tottenham,Igor Tudor,Mutual consent,2026-03-29,Roberto De Zerbi,2026-03-31
+2025/26,Chelsea,Liam Rosenior,Sacked,2026-04-22,Calum McFarlane (interim),2026-04-22
+2025/26,Burnley,Scott Parker,Mutual consent,2026-04-30,Mike Jackson (interim),2026-04-30

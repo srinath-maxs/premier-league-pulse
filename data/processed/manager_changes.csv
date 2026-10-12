@@ -1,0 +1,108 @@
+season,team,date_of_vacancy,outgoing_manager,manner_of_departure,incoming_manager,interim_or_caretaker,games_played_before,ppg_season_before,ppg_last10_before,ppg_next10_after,ppg_rest_of_season,games_after,bounce_ppg
+2014/15,Crystal Palace,2014-12-27,Neil Warnock,Sacked,Alan Pardew,False,18,0.833,0.7,1.5,1.65,20,0.8
+2014/15,West Brom,2014-12-29,Alan Irvine,Sacked,Tony Pulis,False,19,0.895,0.7,1.6,1.421,19,0.9
+2014/15,Newcastle United,2015-01-02,Alan Pardew,Signed by Crystal Palace,John Carver,False,20,1.35,1.4,0.8,0.667,18,-0.6
+2014/15,QPR,2015-02-03,Harry Redknapp,Resigned,Chris Ramsey,False,23,0.826,0.8,0.7,0.733,15,-0.1
+2014/15,Aston Villa,2015-02-11,Paul Lambert,Sacked,Tim Sherwood,False,25,0.88,0.3,1.3,1.231,13,1.0
+2014/15,Sunderland,2015-03-16,Gus Poyet,Sacked,Dick Advocaat,False,29,0.897,0.6,1.333,1.333,9,0.733
+2015/16,Sunderland,2015-10-04,Dick Advocaat,Resigned,Sam Allardyce,False,8,0.375,0.375,0.9,1.2,30,0.525
+2015/16,Liverpool,2015-10-04,Brendan Rodgers,Sacked,Jürgen Klopp,False,7,1.571,1.571,1.5,1.6,30,-0.071
+2015/16,Aston Villa,2015-10-25,Tim Sherwood,Sacked,Rémi Garde,False,10,0.4,0.4,0.4,0.464,28,0.0
+2015/16,Swansea City,2015-12-09,Garry Monk,Sacked,Alan Curtis (caretaker),True,15,0.933,0.6,1.3,1.435,23,0.7
+2015/16,Chelsea,2015-12-17,José Mourinho,Sacked,Guus Hiddink,False,16,0.938,0.8,1.8,1.591,22,1.0
+2015/16,Swansea City,2016-01-18,Alan Curtis,End of caretaker spell,Francesco Guidolin,False,21,0.905,0.6,1.5,1.562,16,0.9
+2015/16,Newcastle United,2016-03-11,Steve McClaren,Sacked,Rafael Benítez,False,28,0.857,0.7,1.3,1.3,10,0.6
+2015/16,Aston Villa,2016-03-29,Rémi Garde,Mutual consent,Eric Black (caretaker),True,31,0.516,0.5,0.143,0.143,7,-0.357
+2015/16,Everton,2016-05-12,Roberto Martínez,Sacked,David Unsworth & Joe Royle (caretakers),True,37,1.189,0.6,3.0,3.0,1,2.4
+2016/17,Swansea City,2016-10-03,Francesco Guidolin,Sacked,Bob Bradley,False,7,0.571,0.571,0.8,1.194,31,0.229
+2016/17,Crystal Palace,2016-12-22,Alan Pardew,Sacked,Sam Allardyce,False,17,0.882,0.4,1.0,1.238,21,0.6
+2016/17,Swansea City,2016-12-27,Bob Bradley,Sacked,Paul Clement,False,18,0.667,0.8,1.5,1.45,20,0.7
+2016/17,Hull City,2017-01-03,Mike Phelan,Sacked,Marco Silva,False,20,0.65,0.6,1.4,1.167,18,0.8
+2016/17,Leicester City,2017-02-23,Claudio Ranieri,Sacked,Craig Shakespeare,False,25,0.84,0.5,2.2,1.769,13,1.7
+2016/17,Middlesbrough,2017-03-16,Aitor Karanka,Mutual consent,Steve Agnew (caretaker),True,27,0.815,0.4,0.6,0.545,11,0.2
+2017/18,Crystal Palace,2017-09-11,Frank de Boer,Sacked,Roy Hodgson,False,4,0.0,0.0,0.9,1.294,34,0.9
+2017/18,Leicester City,2017-10-17,Craig Shakespeare,Sacked,Claude Puel,False,8,0.75,0.75,2.0,1.367,30,1.25
+2017/18,Everton,2017-10-23,Ronald Koeman,Sacked,Sam Allardyce,False,9,0.889,0.889,1.8,1.414,29,0.911
+2017/18,West Ham,2017-11-06,Slaven Bilić,Sacked,David Moyes,False,11,0.818,0.9,1.2,1.222,27,0.3
+2017/18,West Brom,2017-11-20,Tony Pulis,Sacked,Alan Pardew,False,12,0.833,0.4,0.6,0.808,26,0.2
+2017/18,Swansea City,2017-12-20,Paul Clement,Sacked,Carlos Carvalhal,False,18,0.667,0.4,1.5,1.05,20,1.1
+2017/18,Stoke City,2018-01-06,Mark Hughes,Sacked,Paul Lambert,False,22,0.909,0.7,0.7,0.812,16,0.0
+2017/18,Watford,2018-01-21,Marco Silva,Sacked,Javi Gracia,False,24,1.083,0.5,1.1,1.071,14,0.6
+2017/18,Southampton,2018-03-12,Mauricio Pellegrino,Sacked,Mark Hughes,False,30,0.933,0.9,1.0,1.0,8,0.1
+2017/18,West Brom,2018-04-02,Alan Pardew,Mutual consent,Darren Moore (caretaker),True,32,0.625,0.4,1.833,1.833,6,1.433
+2018/19,Fulham,2018-11-14,Slaviša Jokanović,Sacked,Claudio Ranieri,False,12,0.417,0.5,0.9,0.808,26,0.4
+2018/19,Southampton,2018-12-03,Mark Hughes,Sacked,Ralph Hasenhüttl,False,14,0.643,0.5,1.4,1.25,24,0.9
+2018/19,Manchester United,2018-12-18,José Mourinho,Sacked,Ole Gunnar Solskjær,False,17,1.529,1.6,2.6,1.905,21,1.0
+2018/19,Huddersfield Town,2019-01-14,David Wagner,Mutual consent,Jan Siewert,False,22,0.5,0.4,0.3,0.312,16,-0.1
+2018/19,Leicester City,2019-02-24,Claude Puel,Sacked,Brendan Rodgers,False,27,1.185,1.0,1.9,1.818,11,0.9
+2018/19,Fulham,2019-02-28,Claudio Ranieri,Sacked,Scott Parker,False,28,0.607,0.7,0.9,0.9,10,0.2
+2019/20,Watford,2019-09-07,Javi Gracia,Sacked,Quique Sánchez Flores,False,4,0.25,0.25,0.7,0.971,34,0.45
+2019/20,Tottenham,2019-11-19,Mauricio Pochettino,Sacked,José Mourinho,False,12,1.167,1.0,1.6,1.731,26,0.6
+2019/20,Arsenal,2019-11-29,Unai Emery,Sacked,Mikel Arteta,False,13,1.385,1.2,1.1,1.52,25,-0.1
+2019/20,Watford,2019-12-01,Quique Sánchez Flores,Sacked,Nigel Pearson,False,14,0.571,0.7,1.5,1.083,24,0.8
+2019/20,Everton,2019-12-05,Marco Silva,Sacked,Carlo Ancelotti,False,15,0.933,0.7,1.9,1.522,23,1.2
+2019/20,West Ham,2019-12-28,Manuel Pellegrini,Sacked,David Moyes,False,18,1.056,0.7,0.8,1.053,19,0.1
+2019/20,Watford,2020-07-19,Nigel Pearson,Sacked,Hayden Mullins (interim),True,36,0.944,1.0,0.0,0.0,2,-1.0
+2020/21,West Brom,2020-12-16,Slaven Bilić,Sacked,Sam Allardyce,False,13,0.538,0.6,0.5,0.76,25,-0.1
+2020/21,Chelsea,2021-01-25,Frank Lampard,Sacked,Thomas Tuchel,False,19,1.526,1.1,2.2,2.0,19,1.1
+2020/21,Sheffield United,2021-03-13,Chris Wilder,Mutual consent,Paul Heckingbottom (interim),True,28,0.5,0.9,0.9,0.9,10,0.0
+2020/21,Tottenham,2021-04-19,José Mourinho,Sacked,Ryan Mason (interim),True,32,1.562,1.4,2.0,2.0,6,0.6
+2021/22,Watford,2021-10-03,Xisco Muñoz,Sacked,Claudio Ranieri,False,7,1.0,1.0,0.6,0.516,31,-0.4
+2021/22,Newcastle United,2021-10-20,Steve Bruce,Mutual consent,Graeme Jones (interim),True,8,0.375,0.375,0.7,1.533,30,0.325
+2021/22,Tottenham,2021-11-01,Nuno Espírito Santo,Sacked,Antonio Conte,False,10,1.5,1.5,2.1,2.0,28,0.6
+2021/22,Norwich City,2021-11-06,Daniel Farke,Sacked,Dean Smith,False,10,0.2,0.2,0.8,0.63,27,0.6
+2021/22,Aston Villa,2021-11-07,Dean Smith,Sacked,Steven Gerrard,False,11,0.909,1.0,1.6,1.296,27,0.6
+2021/22,Newcastle United,2021-11-08,Graeme Jones,End of interim spell,Eddie Howe,False,11,0.455,0.5,1.0,1.63,27,0.5
+2021/22,Manchester United,2021-11-21,Ole Gunnar Solskjær,Sacked,Michael Carrick (caretaker),True,12,1.417,1.3,2.1,1.577,26,0.8
+2021/22,Manchester United,2021-12-02,Michael Carrick,End of caretaker spell,Ralf Rangnick (interim),True,13,1.385,1.1,1.9,1.542,24,0.8
+2021/22,Everton,2022-01-16,Rafael Benítez,Sacked,Duncan Ferguson (caretaker),True,19,1.0,0.5,0.6,1.053,19,0.1
+2021/22,Watford,2022-01-24,Claudio Ranieri,Sacked,Roy Hodgson,False,20,0.7,0.4,0.8,0.5,18,0.4
+2021/22,Everton,2022-01-31,Duncan Ferguson,End of caretaker spell,Frank Lampard,False,20,0.95,0.5,0.9,1.111,18,0.4
+2021/22,Leeds United,2022-02-27,Marcelo Bielsa,Sacked,Jesse Marsch,False,26,0.885,0.7,1.1,1.25,12,0.4
+2021/22,Burnley,2022-04-15,Sean Dyche,Sacked,Mike Jackson (caretaker),True,30,0.8,1.0,1.375,1.375,8,0.375
+2022/23,Bournemouth,2022-08-30,Scott Parker,Sacked,Gary O'Neil,False,4,0.75,0.75,1.0,1.059,34,0.25
+2022/23,Chelsea,2022-09-07,Thomas Tuchel,Sacked,Graham Potter,False,6,1.667,1.667,1.5,1.062,32,-0.167
+2022/23,Brighton,2022-09-08,Graham Potter,Signed by Chelsea,Roberto De Zerbi,False,6,2.167,2.167,1.1,1.531,32,-1.067
+2022/23,Wolves,2022-10-02,Bruno Lage,Sacked,Steve Davis (interim),True,8,0.75,0.75,0.8,1.167,30,0.05
+2022/23,Aston Villa,2022-10-20,Steven Gerrard,Sacked,Aaron Danks (interim),True,10,0.9,0.9,1.9,1.926,27,1.0
+2022/23,Aston Villa,2022-11-01,Aaron Danks,End of interim spell,Unai Emery,False,13,0.923,0.9,1.6,1.96,25,0.7
+2022/23,Southampton,2022-11-07,Ralph Hasenhüttl,Sacked,Nathan Jones,False,14,0.857,0.8,0.6,0.542,24,-0.2
+2022/23,Wolves,2022-11-14,Steve Davis,End of interim spell,Julen Lopetegui,False,15,0.667,0.7,1.4,1.348,23,0.7
+2022/23,Everton,2023-01-23,Frank Lampard,Sacked,Sean Dyche,False,20,0.75,0.5,1.2,1.167,18,0.7
+2022/23,Leeds United,2023-02-06,Jesse Marsch,Sacked,Michael Skubala (interim),True,20,0.9,0.9,1.1,0.722,18,0.2
+2022/23,Southampton,2023-02-12,Nathan Jones,Sacked,Rubén Sellés,False,22,0.682,0.3,0.9,0.625,16,0.6
+2022/23,Leeds United,2023-02-21,Michael Skubala,End of interim spell,Javi Gracia,False,23,0.826,0.4,1.1,0.8,15,0.7
+2022/23,Crystal Palace,2023-03-17,Patrick Vieira,Sacked,Paddy McCarthy (interim),True,27,1.0,0.5,1.7,1.636,11,1.2
+2022/23,Crystal Palace,2023-03-21,Paddy McCarthy,End of interim spell,Roy Hodgson (interim),True,28,0.964,0.5,1.8,1.8,10,1.3
+2022/23,Tottenham,2023-03-26,Antonio Conte,Mutual consent,Cristian Stellini (interim),True,28,1.75,1.6,1.1,1.1,10,-0.5
+2022/23,Leicester City,2023-04-02,Brendan Rodgers,Mutual consent,Adam Sadler (interim),True,28,0.893,0.8,0.9,0.9,10,0.1
+2022/23,Chelsea,2023-04-02,Graham Potter,Sacked,Bruno Saltor (interim),True,28,1.357,1.3,0.6,0.6,10,-0.7
+2022/23,Chelsea,2023-04-06,Bruno Saltor,End of interim spell,Frank Lampard (interim),True,29,1.345,1.1,0.556,0.556,9,-0.544
+2022/23,Leicester City,2023-04-10,Adam Sadler,End of interim spell,Dean Smith,False,30,0.833,0.7,1.125,1.125,8,0.425
+2022/23,Tottenham,2023-04-24,Cristian Stellini,Sacked,Ryan Mason (interim),True,32,1.656,1.4,1.167,1.167,6,-0.233
+2022/23,Leeds United,2023-05-03,Javi Gracia,Sacked,Sam Allardyce,False,34,0.882,0.8,0.25,0.25,4,-0.55
+2023/24,Sheffield United,2023-12-05,Paul Heckingbottom,Sacked,Chris Wilder,False,14,0.357,0.4,0.8,0.458,24,0.4
+2023/24,Nottingham Forest,2023-12-19,Steve Cooper,Sacked,Nuno Espírito Santo,False,17,0.824,0.6,1.0,1.048,21,0.4
+2023/24,Crystal Palace,2024-02-19,Roy Hodgson,Resigned,Oliver Glasner,False,24,1.0,0.8,1.5,1.846,13,0.7
+2024/25,Manchester United,2024-10-28,Erik ten Hag,Sacked,Ruud van Nistelrooy (interim),True,9,1.222,1.222,1.1,1.069,29,-0.122
+2024/25,Manchester United,2024-11-11,Ruud van Nistelrooy,End of interim spell,Rúben Amorim,False,11,1.364,1.2,1.1,1.0,27,-0.1
+2024/25,Leicester City,2024-11-24,Steve Cooper,Sacked,Ben Dawson (interim),True,12,0.833,0.9,0.4,0.577,26,-0.5
+2024/25,Leicester City,2024-12-01,Ben Dawson,End of interim spell,Ruud van Nistelrooy,False,13,0.769,0.9,0.7,0.6,25,-0.2
+2024/25,Wolves,2024-12-15,Gary O'Neil,Sacked,Vítor Pereira,False,16,0.562,0.8,1.3,1.5,22,0.5
+2024/25,Southampton,2024-12-15,Russell Martin,Sacked,Simon Rusk (interim),True,15,0.333,0.4,0.4,0.318,22,0.0
+2024/25,Southampton,2024-12-22,Simon Rusk,End of interim spell,Ivan Jurić,False,16,0.312,0.4,0.3,0.286,21,-0.1
+2024/25,West Ham,2025-01-08,Julen Lopetegui,Sacked,Graham Potter,False,20,1.15,1.2,1.1,1.111,18,-0.1
+2024/25,Everton,2025-01-09,Sean Dyche,Sacked,Leighton Baines (interim),True,19,0.895,0.8,1.7,1.632,19,0.9
+2024/25,Everton,2025-01-11,Leighton Baines,End of interim spell,David Moyes,False,19,0.895,0.8,1.7,1.632,19,0.9
+2024/25,Southampton,2025-04-07,Ivan Jurić,Mutual consent,Simon Rusk (interim),True,31,0.323,0.4,0.286,0.286,7,-0.114
+2025/26,Nottingham Forest,2025-09-08,Nuno Espírito Santo,Sacked,Ange Postecoglou,False,3,1.333,1.333,0.8,1.143,35,-0.533
+2025/26,West Ham,2025-09-27,Graham Potter,Sacked,Nuno Espírito Santo,False,5,0.6,0.6,1.0,1.091,33,0.4
+2025/26,Nottingham Forest,2025-10-18,Ange Postecoglou,Sacked,Sean Dyche,False,7,0.714,0.714,1.3,1.3,30,0.586
+2025/26,Wolves,2025-11-02,Vítor Pereira,Sacked,Rob Edwards,False,10,0.2,0.2,0.4,0.643,28,0.2
+2025/26,Chelsea,2026-01-01,Enzo Maresca,Resigned,Liam Rosenior,False,19,1.579,1.6,1.8,1.158,19,0.2
+2025/26,Manchester United,2026-01-05,Rúben Amorim,Sacked,Michael Carrick,False,20,1.55,1.4,2.3,2.222,18,0.9
+2025/26,Tottenham,2026-02-11,Thomas Frank,Sacked,Igor Tudor,False,26,1.115,0.7,0.9,1.0,12,0.2
+2025/26,Nottingham Forest,2026-02-12,Sean Dyche,Sacked,Vítor Pereira,False,26,1.038,0.9,1.6,1.417,12,0.7
+2025/26,Tottenham,2026-03-29,Igor Tudor,Mutual consent,Roberto De Zerbi,False,31,0.968,0.3,1.571,1.571,7,1.271
+2025/26,Chelsea,2026-04-22,Liam Rosenior,Sacked,Calum McFarlane (interim),True,34,1.412,0.8,1.0,1.0,4,0.2
+2025/26,Burnley,2026-04-30,Scott Parker,Mutual consent,Mike Jackson (interim),True,34,0.588,0.5,0.5,0.5,4,0.0
