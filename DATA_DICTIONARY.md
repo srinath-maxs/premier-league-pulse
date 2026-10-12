@@ -52,3 +52,7 @@ Home/draw/away win %, home vs away points per game, `home_advantage_ppg`, goals 
 ## manager_changes.csv — one row per in-season managerial change (107 rows)
 
 `season, team, date_of_vacancy, outgoing_manager, manner_of_departure, incoming_manager, interim_or_caretaker, games_played_before, ppg_season_before, ppg_last10_before, ppg_next10_after, ppg_rest_of_season, games_after, bounce_ppg` (next-10 PPG minus last-10 PPG).
+
+## bounce_comparison.csv — is the new-manager bounce real? (made by `src/analysis.py`)
+
+One row per form band (points per game in the 10 games before), plus an "All changes" row. `changed_*` columns are teams that changed manager mid-season; `kept_*` columns are clubs on equally bad 10-game runs that made no change within four months (the comparison group). `*_gain` = next-10 PPG minus last-10 PPG; `extra_gain_from_change` = the difference between the two.

@@ -4,7 +4,7 @@
 
 An end-to-end analytics project covering every Premier League season from **2014/15 to 2025/26** (240 team-seasons, 4,560 matches). It combines match results with squad, transfer and manager data to answer business-style questions and power three interactive dashboards.
 
-> 🚧 **Status:** Phase 1 (data pipeline) complete. Dashboards in progress.
+> 🚧 **Status:** Data pipeline and League Overview dashboard complete. Team Comparison and Season Predictor in progress.
 
 ---
 
@@ -31,16 +31,22 @@ An end-to-end analytics project covering every Premier League season from **2014
 - **Stability matters:** teams that keep their players do better (correlation 0.44 between points and the share of appearances by returning players).
 - **Home advantage vanished without fans:** in 2020/21, home teams averaged *fewer* points per game than away teams (−0.07 PPG gap vs +0.45 in 2014/15).
 - **Promoted teams:** only 16 of 33 survived their first season.
-- **The manager "bounce":** after an in-season change, teams averaged +0.40 more points per game over the next 10 games. *Phase 2 tests whether this is real or just regression to the mean.*
+- **The "new manager bounce" is mostly luck:** teams that changed manager mid-season improved by 0.46 points per game over the next 10 games, but clubs on equally bad runs that *kept* their manager improved by 0.41 anyway. About 88% of the bounce is a bad run evening out (regression to the mean).
 
 ## Project structure
 
 ```
 premier-league-pulse/
+├── app.py                 # Streamlit entry point (streamlit run app.py)
+├── views/                 # dashboard pages
+│   ├── home.py
+│   └── league_overview.py
 ├── src/
 │   ├── config.py          # seasons, sources, team name mapping
 │   ├── fetch_data.py      # Step 1: download raw data
-│   └── build_dataset.py   # Step 2: build the clean tables
+│   ├── build_dataset.py   # Step 2: build the clean tables
+│   ├── analysis.py        # Step 3: manager-bounce comparison
+│   └── ui.py              # shared dashboard helpers (colours, charts)
 ├── data/
 │   ├── raw/               # downloaded files (not in git: ~300 MB)
 │   ├── manual/            # small hand-checked files (manager changes)
@@ -55,7 +61,11 @@ premier-league-pulse/
 pip install -r requirements.txt
 python src/fetch_data.py      # downloads ~300 MB, a few minutes
 python src/build_dataset.py   # builds data/processed/
+python src/analysis.py        # manager-bounce comparison
+streamlit run app.py          # opens the dashboard in your browser
 ```
+
+The processed data is already in the repo, so to just view the dashboard you only need the first and last lines.
 
 ## Data sources
 
