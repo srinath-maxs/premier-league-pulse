@@ -73,4 +73,4 @@ def footer() -> None:
         "Data: match results from football-data.co.uk; squads, market values and transfers "
         "from Transfermarkt; managerial changes from Wikipedia. Money in euros. "
         "2025/26 squad figures use early-season data only. "
-        "Built by V. Srinath · [GitHub](https://github.com/srinath-maxs/premier-league-pulse)")
+        "Built by V. Srinath · [Live app](https://pl-tracker-srinath-8keccaagskcutxicsgvjqu.streamlit.app) · [GitHub](https://github.com/srinath-maxs/premier-league-pulse)")

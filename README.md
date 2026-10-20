@@ -4,7 +4,11 @@
 
 An end-to-end analytics project covering every Premier League season from **2014/15 to 2025/26** (240 team-seasons, 4,560 matches). It combines match results with squad, transfer and manager data to answer business-style questions and power three interactive dashboards.
 
-> 🚧 **Status:** Data pipeline and League Overview dashboard complete. Team Comparison and Season Predictor in progress.
+[![Open the live dashboard](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pl-tracker-srinath-8keccaagskcutxicsgvjqu.streamlit.app)
+
+**👉 Live dashboard: [pl-tracker-srinath-8keccaagskcutxicsgvjqu.streamlit.app](https://pl-tracker-srinath-8keccaagskcutxicsgvjqu.streamlit.app)**
+
+> 🚧 **Status:** League Overview and Team Comparison dashboards live. Season Predictor in progress.
 
 ---
 
@@ -20,7 +24,7 @@ An end-to-end analytics project covering every Premier League season from **2014
 
 | Dashboard | What it shows |
 |---|---|
-| **Team Comparison** | Any team + season vs any other team + season: points, goals, age, squad value, spending, manager, stability; points race; radar profile; the 3 most similar historical teams; a plain-English summary |
+| **Team Comparison** | Any team + season vs any other team + season: 25+ measures side by side with the gap on each; game-by-game points race; a percentile profile against all 240 team-seasons; the 3 most similar teams in history and how they finished; a plain-English summary |
 | **League Overview** | Season filter; spending vs points; age vs points; growth trends by club; efficiency ranking; manager changes; competitive balance; promoted teams; the COVID "no fans" season |
 | **Season Predictor** | Title / top-4 / relegation odds, updated each gameweek; which factors matter most (SHAP) |
 
@@ -40,7 +44,8 @@ premier-league-pulse/
 ├── app.py                 # Streamlit entry point (streamlit run app.py)
 ├── views/                 # dashboard pages
 │   ├── home.py
-│   └── league_overview.py
+│   ├── league_overview.py
+│   └── team_comparison.py
 ├── src/
 │   ├── config.py          # seasons, sources, team name mapping
 │   ├── fetch_data.py      # Step 1: download raw data

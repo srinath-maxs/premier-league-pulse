@@ -14,5 +14,6 @@ st.set_page_config(page_title="Premier League Pulse", page_icon="⚽", layout="w
 nav = st.navigation([
     st.Page("views/home.py", title="Home", icon="⚽", default=True),
     st.Page("views/league_overview.py", title="League Overview", icon="📊"),
+    st.Page("views/team_comparison.py", title="Team Comparison", icon="🆚"),
 ])
 nav.run()

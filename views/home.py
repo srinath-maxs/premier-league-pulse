@@ -37,7 +37,7 @@ with a:
     st.page_link("views/league_overview.py", label="**League Overview**", icon="📊")
     st.caption("Spending vs points, age, managers, club trends and league health, filtered by season.")
 with b:
-    st.markdown("🆚 **Team Comparison**  \n*coming next*")
+    st.page_link("views/team_comparison.py", label="**Team Comparison**", icon="🆚")
     st.caption("Any team and season against any other, e.g. Arsenal 2025/26 vs Liverpool 2019/20.")
 with c:
     st.markdown("🔮 **Season Predictor**  \n*coming soon*")
