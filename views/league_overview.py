@@ -183,7 +183,9 @@ with tab_mgr:
     st.subheader("Is the \"new manager bounce\" real?")
     allc = bc[bc.bucket == "All changes"].iloc[0]
     m1, m2, m3 = st.columns(3)
-    m1.metric("In-season managerial changes", f"{len(mc)}", help=f"In {span}, including interim spells.")
+    m1.metric("Managers who left mid-season", f"{len(mc)}",
+              help=f"In {span}. Worked out from match records; short caretaker stints and "
+                   "temporary stand-ins (e.g. a manager missing one game) are not counted.")
     m2.metric("Improvement after a change", f"{allc.changed_gain:+.2f} PPG",
               help="Points per game in the 10 games after the change minus the 10 games before.")
     m3.metric("Improvement if manager kept", f"{allc.kept_gain:+.2f} PPG",
@@ -218,12 +220,13 @@ with tab_mgr:
                f"the run was. {int(allc.changes)} changes vs {int(allc.control_windows):,} comparison runs. "
                "The worst-form group is small (36 comparison runs), so read it with care.")
 
-    st.markdown("##### Every in-season change")
+    st.markdown("##### Every mid-season departure")
     show = mc.sort_values("date_of_vacancy", ascending=False)[
-        ["season", "team", "outgoing_manager", "manner_of_departure", "incoming_manager",
+        ["season", "team", "outgoing_manager", "manner_of_departure", "caretaker", "incoming_manager",
          "date_of_vacancy", "ppg_last10_before", "ppg_next10_after", "bounce_ppg"]]
     st.dataframe(show, hide_index=True, width="stretch", column_config={
-        "season": "Season", "team": "Club", "outgoing_manager": "Out", "incoming_manager": "In",
+        "season": "Season", "team": "Club", "outgoing_manager": "Out", "incoming_manager": "Next manager",
+        "caretaker": "Caretaker in between",
         "manner_of_departure": "How", "date_of_vacancy": st.column_config.DateColumn("Date"),
         "ppg_last10_before": st.column_config.NumberColumn("PPG before", format="%.2f",
                                                            help="Last 10 games (or fewer)"),

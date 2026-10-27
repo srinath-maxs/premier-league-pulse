@@ -30,10 +30,10 @@ All tables are in `data/processed/`. Money is in euros (€).
 | spend_vs_avg, spend_rank | Transfer spend relative to the season average, and its rank |
 | points_per_100m_value | Points per €100m of squad value (efficiency) |
 | over_performance | Squad value rank minus league position (+5 = finished 5 places higher than its budget suggests) |
-| manager | Manager at the end of the season |
+| manager | Manager at the end of the season (from Transfermarkt; 2025/26 from the last match) |
 | new_manager | True if the end-of-season manager differs from the previous season's |
 | manager_tenure_seasons | Consecutive seasons in charge, including this one |
-| in_season_manager_changes | Managerial changes during the season (interim spells count) |
+| in_season_manager_changes | Managers who left during the season (worked out from match records; short caretaker stints and one-game stand-ins don't count) |
 | promoted, relegated, big_six | Flags (2014/15 has no promoted flag because 2013/14 is not in the data) |
 | data_note | Warnings, e.g. partial squad data for 2025/26 |
 
@@ -49,9 +49,11 @@ Home/away teams, goals, result (H/D/A), shots, shots on target, cards.
 
 Home/draw/away win %, home vs away points per game, `home_advantage_ppg`, goals per game, champion and points, title margin, 4th-place points, safety points (17th), Big Six vs rest average points and `big_six_gap`, `points_spread_sd` (competitive balance), promoted teams that survived, league average age, total transfer spend, average squad value, and whether fans were in stadiums.
 
-## manager_changes.csv — one row per in-season managerial change (107 rows)
+## manager_changes.csv — one row per mid-season managerial departure (95 rows)
 
-`season, team, date_of_vacancy, outgoing_manager, manner_of_departure, incoming_manager, interim_or_caretaker, games_played_before, ppg_season_before, ppg_last10_before, ppg_next10_after, ppg_rest_of_season, games_after, bounce_ppg` (next-10 PPG minus last-10 PPG).
+Worked out from Transfermarkt's match records (`src/managers.py`): a departure is a manager who led the team (started the season or lasted 5+ games) and did not come back that season.
+
+`season, team, date_of_vacancy` (announcement date from Wikipedia, or the day after the last game if Wikipedia has none), `last_game_old_manager, outgoing_manager, games_in_charge, manner_of_departure` (Wikipedia), `caretaker` (anyone who covered 1–4 games in between), `incoming_manager, interim_or_caretaker, date_source, games_played_before, ppg_season_before, ppg_last10_before, ppg_next10_after, ppg_rest_of_season, games_after, bounce_ppg` (next-10 PPG minus last-10 PPG).
 
 ## bounce_comparison.csv — is the new-manager bounce real? (made by `src/analysis.py`)
 

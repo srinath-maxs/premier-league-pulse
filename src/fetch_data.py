@@ -6,7 +6,7 @@ Already-downloaded files are skipped. Add --force to download everything again.
 import sys
 import urllib.request
 
-from config import RAW, RESULTS_URL, SEASON_CODES, TM_BASE, TM_FILES
+from config import RAW, RESULTS_URL, SEASON_CODES, TM_BASE, TM_FILES, TM_GAMES_URL
 
 
 def download(url: str, dest, force: bool = False) -> None:
@@ -28,6 +28,17 @@ def main(force: bool = False) -> None:
     print("Transfermarkt squad data (large files, can take a few minutes):")
     for name, path in TM_FILES.items():
         download(TM_BASE + path, RAW / "transfermarkt" / f"{name}.csv", force)
+
+    print("Transfermarkt match records (managers for every game):")
+    gz = RAW / "transfermarkt" / "games.csv.gz"
+    out = RAW / "transfermarkt" / "games.csv"
+    if not out.exists() or force:
+        download(TM_GAMES_URL, gz, force)
+        import gzip, shutil
+        with gzip.open(gz, "rb") as f_in, open(out, "wb") as f_out:
+            shutil.copyfileobj(f_in, f_out)
+    else:
+        print("  already have games.csv")
 
     print("Done.")
 

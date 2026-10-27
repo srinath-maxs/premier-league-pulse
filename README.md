@@ -35,7 +35,7 @@ An end-to-end analytics project covering every Premier League season from **2014
 - **Stability matters:** teams that keep their players do better (correlation 0.44 between points and the share of appearances by returning players).
 - **Home advantage vanished without fans:** in 2020/21, home teams averaged *fewer* points per game than away teams (−0.07 PPG gap vs +0.45 in 2014/15).
 - **Promoted teams:** only 16 of 33 survived their first season.
-- **The "new manager bounce" is mostly luck:** teams that changed manager mid-season improved by 0.46 points per game over the next 10 games, but clubs on equally bad runs that *kept* their manager improved by 0.41 anyway. About 88% of the bounce is a bad run evening out (regression to the mean).
+- **The "new manager bounce" is mostly luck:** teams whose manager left mid-season improved by 0.45 points per game over the next 10 games, but clubs on equally bad runs that *kept* their manager improved by 0.39 anyway. About 87% of the bounce is a bad run evening out (regression to the mean).
 
 ## Project structure
 
@@ -50,11 +50,12 @@ premier-league-pulse/
 │   ├── config.py          # seasons, sources, team name mapping
 │   ├── fetch_data.py      # Step 1: download raw data
 │   ├── build_dataset.py   # Step 2: build the clean tables
+│   ├── managers.py        # managerial changes worked out from match records
 │   ├── analysis.py        # Step 3: manager-bounce comparison
 │   └── ui.py              # shared dashboard helpers (colours, charts)
 ├── data/
 │   ├── raw/               # downloaded files (not in git: ~300 MB)
-│   ├── manual/            # small hand-checked files (manager changes)
+│   ├── manual/            # Wikipedia manager details (how each manager left)
 │   └── processed/         # clean tables used by the dashboards
 ├── DATA_DICTIONARY.md
 └── requirements.txt
@@ -78,8 +79,13 @@ The processed data is already in the repo, so to just view the dashboard you onl
 |---|---|---|
 | Match results, shots | [football-data.co.uk](https://www.football-data.co.uk/) via [datasets/football-datasets](https://github.com/datasets/football-datasets) | 2014/15–2025/26, complete |
 | Squads, ages, market values, transfers | [Transfermarkt](https://www.transfermarkt.com/) via [salimt/football-datasets](https://github.com/salimt/football-datasets) | 2014/15–2024/25 complete; 2025/26 early season only |
-| Managers (end of season) | Transfermarkt; 2025/26 hand-checked | All seasons |
-| In-season managerial changes | Wikipedia season pages, hand-checked into `data/manual/` | All seasons |
+| Managers and managerial changes | Transfermarkt match records ([dcaribou/transfermarkt-datasets](https://github.com/dcaribou/transfermarkt-datasets)): the manager in charge of each team in every match | All seasons, every match |
+| How each manager left (sacked, resigned…) | Wikipedia season pages, saved in `data/manual/` | All seasons |
+
+### How the data was checked
+- **Results:** all 4,560 match scores and dates agree exactly between football-data.co.uk and Transfermarkt's match records.
+- **Managers:** managerial changes are worked out from the match records (whoever was in charge of each game), not typed in by hand. 94 of 95 departure dates on Wikipedia fall between the outgoing manager's last game and the next game; the end-of-season manager agrees with Transfermarkt for 98 of 99 team-seasons with a change (the one exception is a naming difference).
+- **What counts as a managerial departure:** a manager who led the team (started the season or lasted 5+ games) and did not return that season. A coach standing in for one game while the manager was ill, and caretakers who covered 1–4 games, are not counted as separate changes.
 
 ## Method notes and limitations
 

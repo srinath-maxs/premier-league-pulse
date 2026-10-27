@@ -39,6 +39,10 @@ TM_FILES = {
     "team_competitions_seasons": "team_competitions_seasons/team_competitions_seasons.csv",
 }
 
+# Match-by-match records incl. each team's manager (Transfermarkt, via
+# github.com/dcaribou/transfermarkt-datasets). Used to work out managerial changes.
+TM_GAMES_URL = "https://pub-e682421888d945d684bcae8890b0ec20.r2.dev/data/games.csv.gz"
+
 PREMIER_LEAGUE_ID = "GB1"
 
 # Results-file team name -> (Transfermarkt club id, display name)

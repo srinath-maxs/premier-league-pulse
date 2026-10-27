@@ -70,7 +70,7 @@ def insight(text: str) -> None:
 def footer() -> None:
     st.divider()
     st.caption(
-        "Data: match results from football-data.co.uk; squads, market values and transfers "
-        "from Transfermarkt; managerial changes from Wikipedia. Money in euros. "
+        "Data: match results from football-data.co.uk; squads, market values, transfers and "
+        "managers from Transfermarkt; how each manager left from Wikipedia. Money in euros. "
         "2025/26 squad figures use early-season data only. "
         "Built by V. Srinath · [Live app](https://pl-tracker-srinath-8keccaagskcutxicsgvjqu.streamlit.app) · [GitHub](https://github.com/srinath-maxs/premier-league-pulse)")

@@ -7,11 +7,14 @@ Creates in data/processed/:
   team_matches.csv   one row per team per match (with running points totals)
   team_seasons.csv   one row per team per season  <- the master table
   league_seasons.csv one row per season (league-wide trends)
-  manager_changes.csv one row per in-season managerial change (form before/after)
+  manager_changes.csv one row per in-season managerial departure (form before/after),
+                      worked out from Transfermarkt match records
 """
 import numpy as np
 import pandas as pd
 
+from managers import (club_matches, departures, end_of_season_managers, load_games,
+                      match_to_wikipedia)
 from config import (BIG_SIX, PREMIER_LEAGUE_ID, PROCESSED, RAW, SEASON_CODES,
                     TEAMS, season_label, season_start_year, season_tm)
 
@@ -186,10 +189,11 @@ def manager_metrics(tcs) -> pd.DataFrame:
     lg = tcs[tcs.competition_id == tcs.season_league_competition_id]
     lg = lg[["club_id", "season_id", "competition_id", "season_manager_manager_name",
              "season_points", "season_rank"]].drop_duplicates(["club_id", "season_id"]).copy()
-    # Transfermarkt's 2025/26 snapshot predates the end of that season: use the
-    # hand-checked end-of-season list instead.
-    eos = pd.read_csv(MANUAL / "managers_end_of_season_2025_26.csv")
-    eos = dict(zip(eos.team.map(CLUB_ID), eos.manager))
+    # Transfermarkt's 2025/26 season snapshot predates the end of that season: use
+    # the manager of each club's last 2025/26 match (from the match records) instead.
+    eos = end_of_season_managers(club_matches(load_games()))
+    eos = eos[eos.season == "2025/26"]
+    eos = dict(zip(eos.team.map(CLUB_ID), eos.manager_last_game))
     last = lg.season_id == 2025
     lg.loc[last, "season_manager_manager_name"] = lg.loc[last, "club_id"].map(eos).fillna(
         lg.loc[last, "season_manager_manager_name"])
@@ -212,26 +216,26 @@ def manager_metrics(tcs) -> pd.DataFrame:
 
 
 def manager_change_events(t: pd.DataFrame) -> pd.DataFrame:
-    """One row per in-season managerial change, with form before and after.
+    """One row per in-season managerial departure, with form before and after.
 
-    'In-season' means the vacancy happened between the team's first and last league
-    game. Form is points per game over (up to) the 10 league games before the
-    vacancy and the 10 games after it."""
-    ch = pd.read_csv(MANUAL / "manager_changes.csv", parse_dates=["date_of_vacancy"])
-    span = t.groupby(["season", "team"]).date.agg(["min", "max"]).reset_index()
-    ch = ch.merge(span, on=["season", "team"], how="inner")
-    ch = ch[(ch.date_of_vacancy > ch["min"]) & (ch.date_of_vacancy < ch["max"])].copy()
+    Departures come from the match records (src/managers.py): the outgoing
+    manager's last league game and the first game without them. Form is points per
+    game over (up to) the 10 league games before and the 10 games after.
+    Wikipedia only adds how the manager left and the announcement date."""
+    ch = match_to_wikipedia(departures(club_matches(load_games())))
     rows = []
     for _, c in ch.iterrows():
         g = t[(t.season == c.season) & (t.team == c.team)]
-        before = g[g.date < c.date_of_vacancy]
-        after = g[g.date > c.date_of_vacancy]
+        before = g[g.date <= c.last_game_old_manager]
+        after = g[g.date >= c.first_game_after]
         rows.append({
             "season": c.season, "team": c.team, "date_of_vacancy": c.date_of_vacancy.date(),
-            "outgoing_manager": c.outgoing_manager, "manner_of_departure": c.manner_of_departure,
-            "incoming_manager": c.incoming_manager,
-            "interim_or_caretaker": any(w in str(c.incoming_manager).lower()
-                                        for w in ["interim", "caretaker"]),
+            "last_game_old_manager": c.last_game_old_manager.date(),
+            "outgoing_manager": c.outgoing_manager, "games_in_charge": c.games_in_charge,
+            "manner_of_departure": c.manner_of_departure,
+            "caretaker": c.caretaker, "incoming_manager": c.incoming_manager,
+            "interim_or_caretaker": bool(c.caretaker),
+            "date_source": c.date_source,
             "games_played_before": len(before),
             "ppg_season_before": before.points.mean(),
             "ppg_last10_before": before.tail(10).points.mean(),
@@ -324,7 +328,7 @@ def build():
     events.to_csv(PROCESSED / "manager_changes.csv", index=False)
     print(f"matches: {len(matches)} rows | team_matches: {len(tm_long)} | "
           f"team_seasons: {len(s)} | league_seasons: {len(league)} | "
-          f"in-season manager changes: {len(events)}")
+          f"in-season manager departures: {len(events)}")
     return s
 
 
