@@ -1,7 +1,7 @@
 """Home page: just the name and three story-ring buttons."""
 import streamlit as st
 
-from ui import APP_NAME, GITHUB_URL, IG_GRADIENT, INK, LINE, MUTED, SURFACE
+from ui import APP_NAME, GITHUB_URL, ACCENT_GRADIENT, INK, LINE, MUTED, SURFACE
 
 ICON_OVERVIEW = """<svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor"
  stroke-width="1.8" stroke-linecap="round"><path d="M5 20V12"/><path d="M12 20V5"/><path d="M19 20v-9"/></svg>"""
@@ -46,7 +46,7 @@ st.markdown(f"""
 @keyframes pl-rise {{ from {{ opacity: 0; transform: translateY(14px); }} to {{ opacity: 1; transform: none; }} }}
 
 .pl-ring .ring {{
-  width: 132px; height: 132px; border-radius: 50%; padding: 3px; background: {IG_GRADIENT};
+  width: 132px; height: 132px; border-radius: 50%; padding: 3px; background: {ACCENT_GRADIENT};
   box-shadow: 0 18px 40px rgba(0,0,0,.8);
   transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
 }}
@@ -60,7 +60,7 @@ st.markdown(f"""
 .pl-ring.off .name {{ color: {MUTED}; }}
 .pl-ring:hover .ring, .pl-ring:focus-visible .ring {{
   transform: translateY(-6px) scale(1.04);
-  box-shadow: 0 26px 50px rgba(0,0,0,.9), 0 0 36px rgba(214,41,118,.28);
+  box-shadow: 0 26px 50px rgba(0,0,0,.9), 0 0 36px rgba(4,200,255,.30);
 }}
 .pl-ring.off:hover .ring {{ box-shadow: 0 26px 50px rgba(0,0,0,.9); }}
 .pl-ring:focus-visible .inner {{ outline: 2px solid #0095f6; outline-offset: 2px; }}

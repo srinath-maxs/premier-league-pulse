@@ -19,7 +19,8 @@ RAISED = "#1c1c1e"      # hover / selected
 LINE = "#262626"        # hairline borders
 INK = "#f5f5f5"         # main text
 MUTED = "#a8a8a8"       # secondary text
-IG_GRADIENT = "linear-gradient(45deg, #feda75 0%, #fa7e1e 25%, #d62976 50%, #962fbf 75%, #4f5bd5 100%)"
+# Electric cyan to deep royal blue, in the spirit of the Premier League's colours
+ACCENT_GRADIENT = "linear-gradient(45deg, #04f5ff 0%, #00b8ff 35%, #1f6bff 70%, #3a2bd8 100%)"
 
 # Chart colours, always used in this order. These are the dark-mode steps of a
 # colour-blind-safe palette, checked against the black background.
@@ -154,7 +155,7 @@ hr {{ border-color: {LINE} !important; }}
 }}
 .pl-insight::before {{
   content: ""; position: absolute; left: 0; top: 12px; bottom: 12px; width: 3px;
-  border-radius: 3px; background: {IG_GRADIENT};
+  border-radius: 3px; background: {ACCENT_GRADIENT};
 }}
 .pl-insight b {{ color: #fff; }}
 
