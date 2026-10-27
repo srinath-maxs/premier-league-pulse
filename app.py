@@ -9,7 +9,10 @@ import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).parent / "src"))
 
-st.set_page_config(page_title="Premier League Pulse", page_icon="⚽", layout="wide")
+from ui import apply_theme  # noqa: E402
+
+st.set_page_config(page_title="Premier League Dashboard", page_icon="⚽", layout="wide")
+apply_theme()
 
 nav = st.navigation([
     st.Page("views/home.py", title="Home", icon="⚽", default=True),

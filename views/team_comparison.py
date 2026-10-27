@@ -10,7 +10,7 @@ s, lg, tm, mc, bc = load()
 CLUBS = sorted(s.team.unique())
 A_COL, B_COL = SERIES[0], SERIES[1]
 
-st.title("🆚 Team Comparison")
+st.title("Team Comparison")
 st.caption("Pick any club and season on each side, even from different eras. Spending is compared "
            "against each season's league average, so 2014 and 2025 money can be compared fairly.")
 
@@ -219,11 +219,11 @@ pa, pb = pct.loc[A.name, dims], pct.loc[B.name, dims]
 fig = go.Figure()
 for i, d in enumerate(dims):
     fig.add_shape(type="line", x0=min(pa[d], pb[d]), x1=max(pa[d], pb[d]), y0=i, y1=i,
-                  line=dict(color="#d6d5d0", width=3))
+                  line=dict(color="#3a3a3e", width=3))
 for vals, row, colour, sym, nm in [(pa, A, A_COL, SYMBOLS[0], name_a), (pb, B, B_COL, SYMBOLS[1], name_b)]:
     fig.add_trace(go.Scatter(
         x=vals.values, y=list(range(len(dims))), mode="markers", name=nm,
-        marker=dict(size=14, color=colour, symbol=sym, line=dict(width=1.5, color="#fcfcfb")),
+        marker=dict(size=14, color=colour, symbol=sym, line=dict(width=1.5, color="#000000")),
         customdata=[raw_text[d](row) for d in dims],
         hovertemplate=f"<b>{nm}</b><br>%{{customdata}}<br>Better than %{{x:.0f}}% of team-seasons<extra></extra>"))
 fig.update_yaxes(tickvals=list(range(len(dims))), ticktext=dims, showgrid=False)

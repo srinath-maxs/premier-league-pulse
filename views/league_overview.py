@@ -8,9 +8,19 @@ from ui import BAD, GOOD, MAX_CLUBS, OTHER, SERIES, SYMBOLS, eur_m, footer, insi
 
 s_all, lg_all, tm, mc_all, bc = load()
 ALL_SEASONS = seasons(s_all)
+
+# Headline links over all completed seasons, shown in the ⓘ tooltips by each heading
+_full = s_all[s_all.season != "2025/26"]
+R = {c: _full[["points", c]].corr().iloc[0, 1]
+     for c in ["squad_value_vs_avg", "spend_vs_avg", "avg_age_weighted", "stability_pct"]}
+R_NOTE = ("r measures how closely two things move together, from −1 to 1. "
+          "0 means no link; 1 means a perfect link.")
+_bc_all = bc[bc.bucket == "All changes"].iloc[0]
+_no_fans = lg_all.set_index("season").loc["2020/21", "home_advantage_ppg"]
+_with_fans = lg_all[lg_all.season != "2020/21"].home_advantage_ppg.mean()
 CLUBS = sorted(s_all.team.unique())
 
-st.title("📊 League Overview")
+st.title("League Overview")
 st.caption("How money, squad age, managers and the league itself have shaped the Premier League.")
 
 # ------------------------------------------------------------------ filters
@@ -57,7 +67,7 @@ def scatter(df, x, y, xtitle, ytitle, hover_x):
         d = df[df.team == club]
         fig.add_trace(go.Scatter(
             x=d[x], y=d[y], mode="markers", name=club,
-            marker=dict(size=11, color=COLOR[club], symbol=SHAPE[club], line=dict(width=1.5, color="#fcfcfb")),
+            marker=dict(size=11, color=COLOR[club], symbol=SHAPE[club], line=dict(width=1.5, color="#000000")),
             customdata=d[cd], hovertemplate=hover))
     # Straight-line trend through all dots
     ok = df[[x, y]].dropna()
@@ -71,7 +81,7 @@ def scatter(df, x, y, xtitle, ytitle, hover_x):
     return style(fig, 460)
 
 
-INK = "#52514e"
+INK = "#8a8a8e"
 s["pos_label"] = s.position.map(lambda p: f"{p}{'st' if p == 1 else 'nd' if p == 2 else 'rd' if p == 3 else 'th'}")
 
 tab_money, tab_squad, tab_mgr, tab_trend, tab_league, tab_table = st.tabs(
@@ -80,7 +90,9 @@ tab_money, tab_squad, tab_mgr, tab_trend, tab_league, tab_table = st.tabs(
 
 # ------------------------------------------------------------------ money
 with tab_money:
-    st.subheader("Does money buy points?")
+    st.subheader("Does money buy points?", help=(
+        f"Points vs squad value (relative to that season's average): r = {R['squad_value_vs_avg']:.2f}. "
+        f"Points vs transfer spend: r = {R['spend_vs_avg']:.2f}. 2014/15 to 2024/25. " + R_NOTE))
     measure = st.radio("Measure of spending power",
                        ["Squad value (vs season average)", "Transfer spend (vs season average)"],
                        horizontal=True)
@@ -92,7 +104,7 @@ with tab_money:
                             "Points", "%{customdata[3]}"), width="stretch")
     r = d[[col, "points"]].corr().iloc[0, 1]
     b = np.polyfit(d[col], d.points, 1)[0]
-    insight(f"**{span}:** correlation r = {r:.2f}. On average, a club with twice the league-average "
+    insight(f"**{span}:** on average, a club with twice the league-average "
             f"{'squad value' if col == 'squad_value_vs_avg' else 'transfer spend'} earned about "
             f"**{b:.0f} more points** than an average one."
             + (" Squad value is the stronger predictor: what a club *has* matters more than what it "
@@ -125,7 +137,9 @@ with tab_money:
 
 # ------------------------------------------------------------------ age & stability
 with tab_squad:
-    st.subheader("Does a younger or older squad do better?")
+    st.subheader("Does a younger or older squad do better?", help=(
+        f"Points vs average age: r = {R['avg_age_weighted']:.2f}, close to no link at all. "
+        "2014/15 to 2024/25. " + R_NOTE))
     d = s.dropna(subset=["avg_age_weighted"]).copy()
     d["hover_x"] = "Average age: " + d.avg_age_weighted.map(lambda v: f"{v:.1f}")
     st.plotly_chart(scatter(d, "avg_age_weighted", "points",
@@ -159,7 +173,7 @@ with tab_squad:
     r_age = d[["avg_age_weighted", "points"]].corr().iloc[0, 1]
     best_band = by.loc[by.points.idxmax()]
     richest = by.loc[by.value.idxmax()]
-    text = (f"Age on its own barely matters (r = {r_age:.2f}). Squads aged **{best_band.band}** earned the "
+    text = (f"Age on its own barely matters. Squads aged **{best_band.band}** earned the "
             f"most points on average ({best_band.points:.0f}, from {best_band.n} team-seasons)")
     if richest.band == best_band.band:
         text += (f", but they were also the richest ({best_band.value:.2f}× average squad value). "
@@ -168,19 +182,22 @@ with tab_squad:
         text += "."
     insight(text)
 
-    st.subheader("Does keeping the squad together help?")
+    st.subheader("Does keeping the squad together help?", help=(
+        f"Points vs squad stability: r = {R['stability_pct']:.2f}. 2014/15 to 2024/25. " + R_NOTE))
     d = s.dropna(subset=["stability_pct"]).copy()
     d["hover_x"] = "Returning players: " + d.stability_pct.map(lambda v: f"{v:.0f}%") + " of appearances"
     st.plotly_chart(scatter(d, "stability_pct", "points",
                             "Share of appearances by players who were at the club last season (%)",
                             "Points", "%{customdata[3]}"), width="stretch")
     r_st = d[["stability_pct", "points"]].corr().iloc[0, 1]
-    insight(f"Stability matters more than age (r = {r_st:.2f}). Partly this is cause and effect "
+    insight(f"Stability matters more than age. Partly this is cause and effect "
             "the other way round: successful clubs keep their players, struggling clubs rebuild.")
 
 # ------------------------------------------------------------------ managers
 with tab_mgr:
-    st.subheader("Is the \"new manager bounce\" real?")
+    st.subheader("Is the \"new manager bounce\" real?", help=(
+        f"About {_bc_all.kept_gain / _bc_all.changed_gain:.0%} of the improvement after a manager leaves "
+        "also happens at clubs that keep their manager: it's mostly a bad run evening out."))
     allc = bc[bc.bucket == "All changes"].iloc[0]
     m1, m2, m3 = st.columns(3)
     m1.metric("Managers who left mid-season", f"{len(mc)}",
@@ -205,7 +222,7 @@ with tab_mgr:
     fig.update_layout(barmode="group", bargap=0.3, bargroupgap=0.08,
                       title="Change in points per game over the next 10 games, by form before")
     fig.update_xaxes(title="Points per game in the 10 games before (how bad the run was)")
-    fig.update_yaxes(title="Change in points per game", zeroline=True, zerolinecolor="#d6d5d0")
+    fig.update_yaxes(title="Change in points per game", zeroline=True, zerolinecolor="#3a3a3e")
     fig = style(fig, 460)
     fig.update_layout(legend=dict(orientation="h", yanchor="top", y=-0.22, x=0), margin=dict(t=48))
     st.plotly_chart(fig, width="stretch")
@@ -262,7 +279,7 @@ with tab_trend:
         fig.add_trace(go.Scatter(
             x=c.season, y=c[colm], name=club, mode="lines+markers", connectgaps=False,
             line=dict(color=SERIES[i], width=2),
-            marker=dict(size=9, symbol=SYMBOLS[i], line=dict(width=1.5, color="#fcfcfb")),
+            marker=dict(size=9, symbol=SYMBOLS[i], line=dict(width=1.5, color="#000000")),
             customdata=np.stack([mgr, c.position.fillna(0)], axis=-1),
             hovertemplate=f"<b>{club} %{{x}}</b><br>{metric}: %{{y}}<br>Manager: %{{customdata[0]}}"
                           "<extra></extra>"))
@@ -288,7 +305,9 @@ with tab_trend:
 
 # ------------------------------------------------------------------ league health
 with tab_league:
-    st.subheader("Home advantage, and the season without fans")
+    st.subheader("Home advantage, and the season without fans", help=(
+        f"With fans, home teams earned {_with_fans:+.2f} extra points per game on average. "
+        f"In 2020/21, played behind closed doors: {_no_fans:+.2f}."))
     colours = [SERIES[1] if f.startswith("No") else SERIES[0] for f in lg.fans_in_stadiums]
     fig = go.Figure(go.Bar(
         x=lg.season, y=lg.home_advantage_ppg, marker_color=colours,
@@ -299,8 +318,8 @@ with tab_league:
     if "2020/21" in set(lg.season):
         v = lg.set_index("season").loc["2020/21", "home_advantage_ppg"]
         fig.add_annotation(x="2020/21", y=max(v, 0) + 0.12, text="<b>No fans</b>", showarrow=False,
-                           font=dict(color="#52514e"))
-    fig.update_yaxes(title="Extra points per game for home teams", zeroline=True, zerolinecolor="#d6d5d0")
+                           font=dict(color="#a8a8a8"))
+    fig.update_yaxes(title="Extra points per game for home teams", zeroline=True, zerolinecolor="#3a3a3e")
     fig.update_xaxes(type="category")
     st.plotly_chart(style(fig, 380, legend=False), width="stretch")
     normal = lg[~lg.fans_in_stadiums.str.startswith("No")].home_advantage_ppg.mean()
